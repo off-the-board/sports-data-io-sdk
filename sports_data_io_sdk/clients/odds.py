@@ -32,7 +32,7 @@ class SportsDataOddsClient(BaseClient):
     @GET
     @ADD_AUTH
     def player_props_by_player(self, date, player_id):
-        return "{base_url}/PlayerPropsByPlayer/{date}/{player_id}".format(base_url=self._base_url, date=date,
+        return "{base_url}/PlayerPropsByPlayerID/{date}/{player_id}".format(base_url=self._base_url, date=date,
                                                                           player_id=player_id)
 
     @GET
@@ -48,7 +48,6 @@ class SportsDataOddsClient(BaseClient):
 
     @GET
     @ADD_AUTH
-    def pregame_odds_by_line_movement(self, date, game_id):
-        return "{base_url}/GameOddsLineMovement/{date}/{game_id}".format(base_url=self._base_url, date=date,
-                                                                         game_id=game_id)
+    def pregame_odds_line_movement(self, game_id):
+        return "{base_url}/GameOddsLineMovement/{game_id}".format(base_url=self._base_url,  game_id=game_id)
 

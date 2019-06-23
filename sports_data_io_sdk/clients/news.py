@@ -31,7 +31,7 @@ class SportsDataNewsClient(BaseClient):
     @GET
     @ADD_AUTH
     def news_by_player(self, player_id):
-        return "{base_url}/NewsByPlayer/{player_id}".format(base_url=self._base_url, player_id=player_id)
+        return "{base_url}/NewsByPlayerID/{player_id}".format(base_url=self._base_url, player_id=player_id)
                
 
     @GET
@@ -47,23 +47,23 @@ class SportsDataNewsClient(BaseClient):
     @GET
     @ADD_AUTH
     def premium_news_by_player(self, player_id):
-        return "{base_url}/PremiumNewsByPlayer/{player_id}".format(base_url=self._premium_url, player_id=player_id)
+        return "{base_url}/PremiumNewsByPlayerID/{player_id}".format(base_url=self._premium_url, player_id=player_id)
                
 
     @GET
     @ADD_AUTH
     def rotoballer_articles(self):
-        return "{base_url}/RotoBallerNews".format(base_url=self._rotoballer_url)
+        return "{base_url}/RotoBallerArticles".format(base_url=self._rotoballer_url)
 
     @GET
     @ADD_AUTH
     def rotoballer_articles_by_date(self, date):
-        return "{base_url}/RotoBallerNewsByDate/{date}".format(base_url=self._rotoballer_url, date=date)
+        return "{base_url}/RotoBallerArticlesByDate/{date}".format(base_url=self._rotoballer_url, date=date)
 
     @GET
     @ADD_AUTH
     def rotoballer_artcles_by_player(self, player_id):
-        return "{base_url}/RotoBallerNewsByPlayer/{player_id}".format(base_url=self._rotoballer_url, 
-                                                                      player_id=player_id)
+        return "{base_url}/RotoBallerArticlesByPlayerID/{player_id}".format(base_url=self._rotoballer_url,
+                                                                            player_id=player_id)
 
 
